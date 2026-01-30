@@ -24,6 +24,51 @@
 
 ---
 
+## Product Line: Three Styles
+
+*The Sof expands into three distinct styles for different occasions:*
+
+### 1. The Sof — Outdoors
+**Vibe:** Warm and durable
+
+- Built for actual outdoor use (errands, walks, casual outings)
+- Weather-resistant or heavier-weight materials
+- Practical but still luxurious
+- Muted, nature-inspired colorways (forest, charcoal, cream)
+- Focus: Function meets comfort
+
+### 2. The Sof — School
+**Vibe:** Simple and cute, not too distracting
+
+- Everyday wearable for campus/work-from-anywhere
+- Lighter weight, easy to layer
+- Subtle branding, clean lines
+- Softer colors (blush, sage, oatmeal)
+- Focus: Effortless, put-together cozy
+
+### 3. The Sof — Playhouse
+**Vibe:** Yeezy shine and splash
+
+- Evening/going-out statement piece
+- Premium finishes (sheen, metallic accents, unique textures)
+- Bold or unexpected colorways
+- Fashion-forward, Instagram/TikTok moment
+- Focus: Luxury you show off
+
+---
+
+### Style Matrix (Working Concepts)
+
+| Style | Occasion | Materials | Colors | Price Point |
+|-------|----------|-----------|--------|-------------|
+| **Outdoors** | Errands, walks, casual | Heavier, durable, weather-ready | Muted earth tones | $175+ |
+| **School** | Campus, WFH, everyday | Lighter, soft, layerable | Soft neutrals | $175 |
+| **Playhouse** | Evening, events, flex | Shine, texture, premium finish | Bold/metallic | $200+? |
+
+*Note: These are initial concepts. Material selection and exact pricing TBD based on sourcing.*
+
+---
+
 ## Competitive Landscape
 
 ### Direct Competitor: LazyOne Blanket Hoodies
@@ -192,6 +237,61 @@ Influencer commissions: 10-20% if using affiliates
 3. **Initial quantity** — 25, 50, 100 units?
 4. **Launch timing** — Spring (off-season but less competition) or wait for fall?
 5. **Brand voice** — Sofi as personality, or more anonymous luxury brand?
+
+---
+
+## Premium Packaging — Apple-Style Unboxing
+
+*The unboxing IS the first product experience.*
+
+### Inspiration: Fashion Brands Doing It Right
+
+| Brand | Approach |
+|-------|----------|
+| **Yeezy/Yeezy Gap** | Minimal, industrial, oversized bags, polarizing but memorable |
+| **Fear of God / ESSENTIALS** | Clean boxes, tissue wrap, branded garment bags, stickers |
+| **SKIMS** | Soft pink rigid boxes, velvet-touch finish, very shareable |
+| **Aimé Leon Dore** | Signature green boxes, collector mentality |
+| **Kith** | Recognizable box, branded tissue, seasonal updates |
+
+### The "Apple Effect" for Fashion
+
+| Element | How It Applies |
+|---------|----------------|
+| **Slow reveal** | Rigid box with snug-fit magnetic lid |
+| **First touch** | Soft-touch coating, thick cardboard |
+| **Minimal text** | Brand mark only, no SKU clutter |
+| **Layered discovery** | Tissue → garment → card/sticker underneath |
+| **Sensory** | Optional subtle scent |
+| **Keep the box** | Packaging becomes decor/storage |
+
+### Proposed Packaging for The Sof
+
+```
+OUTER: Matte black or cream rigid box (magnetic closure)
+       └── Subtle embossed "SofiLife" or "The Sof" logo
+       
+LAYER 1: Custom tissue paper (brand pattern or solid)
+
+LAYER 2: The Sof hoodie, folded beautifully
+         └── Faux fur visible on top (texture sells)
+         
+LAYER 3: Under the garment:
+         └── Care card (branded)
+         └── Thank you note from Sofi (personal touch)
+         └── 1-2 branded stickers
+         └── Optional: small drawstring bag for storage
+```
+
+### Cost Estimate
+- Premium rigid box + tissue + inserts: **$8-15 per unit**
+- At $175 retail, this is ~5-8% of price — worth it for the experience
+
+### Packaging Vendors to Explore
+- **Packlane** — Custom rigid boxes, low MOQ
+- **Arka** — Eco-friendly options
+- **NoIssue** — Tissue paper, stickers, sustainable focus
+- **Hero Packaging** — Compostable if going eco angle
 
 ---
 
