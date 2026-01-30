@@ -1,101 +1,129 @@
+import Link from "next/link";
 import Image from "next/image";
+import { prisma } from "@/lib/db";
+import { Button } from "@/components/ui";
+import { ProductCard } from "@/components/product";
 
-export default function Home() {
+async function getFeaturedProducts() {
+  const products = await prisma.product.findMany({
+    where: { active: true, featured: true },
+    include: {
+      images: { orderBy: { position: "asc" } },
+    },
+    take: 4,
+  });
+  return products;
+}
+
+export default async function HomePage() {
+  const featuredProducts = await getFeaturedProducts();
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      {/* Hero Section */}
+      <section className="relative h-[80vh] min-h-[600px] bg-sand">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=1920&q=80"
+            alt="Hero background"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-charcoal/30" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        
+        <div className="relative container h-full flex items-center">
+          <div className="max-w-xl text-cream">
+            <h1 className="text-display font-medium mb-6">
+              Modern Essentials
+            </h1>
+            <p className="text-body text-cream/90 mb-8 max-w-md">
+              Thoughtfully designed pieces for everyday comfort. 
+              Simple, sustainable, and made to last.
+            </p>
+            <Link href="/shop">
+              <Button size="lg" className="bg-cream text-charcoal hover:bg-cream/90">
+                Shop Now
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Products */}
+      <section className="section">
+        <div className="container">
+          <div className="flex items-center justify-between mb-8 md:mb-12">
+            <h2 className="text-headline font-medium">Featured</h2>
+            <Link 
+              href="/shop" 
+              className="text-small font-medium text-stone hover:text-charcoal transition-colors"
+            >
+              View All →
+            </Link>
+          </div>
+
+          {featuredProducts.length > 0 ? (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              {featuredProducts.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          ) : (
+            <p className="text-body text-stone">Coming soon...</p>
+          )}
+        </div>
+      </section>
+
+      {/* Brand Story Teaser */}
+      <section className="bg-sand">
+        <div className="container section">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+            <div className="relative aspect-square">
+              <Image
+                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80"
+                alt="Our story"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-headline font-medium mb-6">Our Story</h2>
+              <p className="text-body text-stone mb-4">
+                SofiLife started with a simple idea: create clothing that feels as good 
+                as it looks. We believe in quality over quantity, timeless designs over 
+                fast fashion, and comfort that doesn&apos;t compromise on style.
+              </p>
+              <p className="text-body text-stone mb-8">
+                Every piece is thoughtfully designed with you in mind — made from premium 
+                materials that get softer with every wear.
+              </p>
+              <Link href="/about">
+                <Button variant="outline">Learn More</Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter */}
+      <section className="section">
+        <div className="container max-w-xl text-center">
+          <h2 className="text-headline font-medium mb-4">Stay in Touch</h2>
+          <p className="text-body text-stone mb-8">
+            Be the first to know about new arrivals, exclusive offers, and more.
+          </p>
+          <form className="flex gap-4 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 bg-white border border-border text-body focus:outline-none focus:ring-2 focus:ring-charcoal"
+            />
+            <Button type="submit">Subscribe</Button>
+          </form>
+        </div>
+      </section>
+    </>
   );
 }
