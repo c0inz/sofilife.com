@@ -195,12 +195,60 @@ Influencer commissions: 10-20% if using affiliates
 
 ---
 
+## Competitive Intelligence: LazyOne
+
+### Company Profile
+
+| Attribute | Details |
+|-----------|---------|
+| **Company** | Lazy One Inc. |
+| **HQ** | 2885 N 200 W, Logan, UT 84341 |
+| **Phone** | (435) 554-3152 |
+| **Email** | info@lazyone.com |
+| **Website** | https://lazyone.com |
+
+### Product Line: Blanket Hoodies
+
+- **Price:** $52.99
+- **Materials:** 100% coral fleece inner, luxurious microfiber outer
+- **Features:** Double-sided fabric, oversized plush hood, deep kangaroo pockets, anti-pill, machine washable
+- **Sizing:** One size fits all
+- **Positioning:** Family fun, gift-giving, cute prints (moose, bears, cats, etc.)
+- **Product URL:** https://lazyone.com/buffalo-fair-isle-blanket-hoodie/
+
+### Manufacturing (Analysis)
+
+**Likely overseas (China)** based on:
+- $52.99 price point with mixed materials = impossible margins with US manufacturing
+- Standard practice for US apparel brands at this volume/price
+- US cut-and-sew would push COGS to $30-40+, killing margin at $53 retail
+
+**How to verify:**
+1. **Buy product** — Care label will show "Made in China" or "Imported" (FTC requires country of origin)
+2. **Import records** — Search ImportYeti.com or Panjiva for "Lazy One Inc" to see customs data and Chinese suppliers
+3. **Ask directly** — Email info@lazyone.com asking about manufacturing (long shot)
+4. **Trade shows** — Their factory likely exhibits at Canton Fair or Magic Las Vegas
+
+### Action Items
+
+- [ ] Order LazyOne blanket hoodie ($52.99)
+- [ ] Check care label for country of origin
+- [ ] Assess material quality and construction
+- [ ] Note stitching, seams, trim attachment method
+- [ ] Search ImportYeti for their supplier info
+- [ ] Use as benchmark when evaluating manufacturers
+
+### Why This Matters
+
+If LazyOne can produce mixed-material blanket hoodies at scale with overseas manufacturing, their suppliers could potentially produce The Sof as well — or we learn what quality level $50 COGS gets you and price our premium accordingly.
+
+---
+
 ## References
 
 - **LazyOne Blanket Hoodie:** https://lazyone.com/buffalo-fair-isle-blanket-hoodie/
-  - Price: $52.99
-  - Materials: 100% coral fleece inner, microfiber outer
-  - Positioning: Family fun, gift-giving
+- **LazyOne Category Page:** https://lazyone.com/blanket-hoodies/
+- **LazyOne Contact:** info@lazyone.com / (435) 554-3152
 
 ---
 
