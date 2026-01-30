@@ -26,7 +26,7 @@ async function main() {
       slug: "plush-hoodie",
       description:
         "Our signature plush hoodie in premium heavyweight cotton. Relaxed fit with a cozy brushed interior. Perfect for everyday comfort.",
-      price: 8900, // $89.00
+      price: 17500, // $175.00
       compareAt: 11000, // $110.00 (on sale!)
       category: "hoodies",
       featured: true,
